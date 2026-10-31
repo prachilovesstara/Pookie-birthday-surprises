@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pookie Birthday Surprises ♡</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #e5f2ff;
+            color: #365b85;
+            text-align: center;
+        }
+
+        nav {
+            padding: 20px;
+            background: #c5e1ff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 85vh;
+            padding: 90px 20px;
+            background-color: #eaf4ff;
+            background-image:
+                linear-gradient(45deg, #c9e1fa 25%, transparent 25%),
+                linear-gradient(-45deg, #c9e1fa 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #c9e1fa 75%),
+                linear-gradient(-45deg, transparent 75%, #c9e1fa 75%);
+            background-size: 35px 35px;
+        }
+
+        .sticker {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(35px, 8vw, 65px);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 15px auto 30px;
+            max-width: 450px;
+            line-height: 1.7;
+        }
+
+        button {
+            background: #709dcc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #477cae;
+        }
+
+        .explore {
+            padding: 60px 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 220px;
+            box-shadow: 0 5px 15px #b5cde5;
+        }
+
+        .card span {
+            font-size: 40px;
+        }
+
+        footer {
+            padding: 25px;
+            background: #c5e1ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>🐰 Pookie Birthday Surprises ♡</nav>
+
+    <section class="hero">
+
+        <div class="sticker">🐈 🎀 🐰</div>
+
+        <h1>Little surprises,<br>lots of love!</h1>
+
+        <p>
+            Because some people deserve more
+            than just a birthday wish.
+            Let's make their day magical! 💙
+        </p>
+
+        <button onclick="createSurprise()">
+            ✧ CREATE YOUR SURPRISE ✧
+        </button>
+
+        <p>♡ made with love and a little magic ♡</p>
+
+    </section>
+
+    <section class="explore">
+
+        <h2>Explore our little world ✨</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>💌</span>
+                <h3>Love Letters</h3>
+                <p>Words straight from the heart.</p>
+            </div>
+
+            <div class="card">
+                <span>📸</span>
+                <h3>Memory Scrapbook</h3>
+                <p>Collect your favourite memories.</p>
+            </div>
+
+            <div class="card">
+                <span>🎂</span>
+                <h3>Birthday Wishes</h3>
+                <p>Make wishes extra special.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        Made with ♡ by Pookie Birthday Surprises
+        <p>⭐ 🐰 💙 🐈</p>
+    </footer>
+
+    <script>
+        function createSurprise() {
+            alert("Yayyy! Your birthday magic begins here! 💙");
+        }
+    </script>
+
+</body>
+  </html>
