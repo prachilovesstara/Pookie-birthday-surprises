@@ -2,564 +2,276 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A tiny birthday surprise 🐰</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pookie Birthday Surprises 🐧</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Patrick+Hand&display=swap');
-
 *{box-sizing:border-box}
 
 body{
  margin:0;
  min-height:100vh;
- background:#fffdf8;
- color:#4e463f;
- font-family:Nunito,sans-serif;
- display:grid;
- place-items:center;
- padding:18px;
- background-image:radial-gradient(#e7d9c9 1px,transparent 1px);
- background-size:18px 18px;
+ background:linear-gradient(145deg,#e8f7fc,#fff7f1);
+ color:#25384a;
+ font-family:Georgia,serif;
 }
 
-.shell,.creator{
- width:min(720px,100%);
- background:#fffefa;
- border:2px solid #e9dfd2;
- border-radius:15px;
- padding:clamp(20px,5vw,40px);
- box-shadow:0 12px 35px #55432b18;
- position:relative;
- overflow:hidden;
+.wrap{
+ width:min(92%,600px);
+ margin:auto;
+ padding:25px 0;
 }
 
-.screen{
- min-height:455px;
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
+.brand{
  text-align:center;
- animation:appear .45s ease;
-}
-
-.hidden{display:none!important}
-
-h1,h2{
- font-family:'Patrick Hand',cursive;
- color:#bd654d;
- margin:8px 0;
-}
-
-h1{font-size:clamp(38px,8vw,58px)}
-h2{font-size:clamp(28px,6vw,40px)}
-
-p{
- font-size:17px;
- line-height:1.65;
- max-width:520px;
-}
-
-.kicker{
- font-size:13px;
- letter-spacing:2px;
- text-transform:uppercase;
- color:#8c9e9e;
- font-weight:900;
-}
-
-.btn{
- border:0;
- border-radius:30px;
- background:#d96f50;
- color:white;
- padding:12px 26px;
- font-weight:900;
- font-size:17px;
- box-shadow:0 4px 0 #b8563e;
- cursor:pointer;
- margin:8px;
-}
-
-.btn.alt{
- background:#89aeb8;
- box-shadow:0 4px 0 #668d97;
-}
-
-.bunny{
- width:160px;
- height:180px;
- position:relative;
- margin:15px auto;
- transform-origin:bottom center;
-}
-
-.ear{
- position:absolute;
- top:0;
- width:38px;
- height:92px;
- background:white;
- border:3px solid #63584f;
- border-radius:50%;
-}
-
-.ear.left{
- left:37px;
- transform:rotate(-17deg);
-}
-
-.ear.right{
- right:37px;
- transform:rotate(17deg);
-}
-
-.ear:after{
- content:"";
- position:absolute;
- inset:10px 9px;
- background:#efb8b5;
- border-radius:50%;
-}
-
-.head{
- position:absolute;
- top:55px;
- left:22px;
- width:116px;
- height:105px;
- background:white;
- border:3px solid #63584f;
- border-radius:48%;
- z-index:2;
-}
-
-.eye{
- position:absolute;
- top:40px;
- width:7px;
- height:9px;
- background:#51463f;
- border-radius:50%;
-}
-
-.eye.l{left:31px}
-.eye.r{right:31px}
-
-.nose{
- position:absolute;
- top:55px;
- left:53px;
- width:10px;
- height:7px;
- background:#e99b9c;
- border-radius:50%;
-}
-
-.cheek{
- position:absolute;
- top:58px;
- width:17px;
- height:9px;
- background:#f4c8c0;
- border-radius:50%;
-}
-
-.cheek.l{left:13px}
-.cheek.r{right:13px}
-
-.mouth{
- position:absolute;
- top:63px;
- left:54px;
- width:10px;
- height:8px;
- border-bottom:2px solid #63584f;
- border-radius:50%;
-}
-
-.body{
- position:absolute;
- bottom:-18px;
- left:37px;
- width:44px;
- height:38px;
- background:white;
- border:3px solid #63584f;
- border-radius:50%;
-}
-
-.foot{
- position:absolute;
- bottom:-20px;
- width:33px;
- height:18px;
- background:white;
- border:3px solid #63584f;
- border-radius:50%;
- z-index:3;
-}
-
-.foot.l{left:35px}
-.foot.r{right:35px}
-
-.arm{
- position:absolute;
- top:118px;
- width:32px;
- height:12px;
- background:white;
- border:3px solid #63584f;
- border-radius:15px;
- z-index:3;
-}
-
-.arm.l{left:7px}
-.arm.r{right:7px}
-
-.dancing{
- animation:dance .48s infinite alternate ease-in-out;
-}
-
-.dancing .arm.l{
- animation:wave .35s infinite alternate;
-}
-
-.dancing .arm.r{
- animation:wave .35s infinite alternate-reverse;
-}
-
-@keyframes dance{
- from{transform:rotate(-9deg) translateY(0)}
- to{transform:rotate(9deg) translateY(-12px)}
-}
-
-@keyframes wave{
- from{transform:rotate(-35deg)}
- to{transform:rotate(40deg)}
-}
-
-@keyframes appear{
- from{opacity:0;transform:translateY(12px)}
- to{opacity:1;transform:translateY(0)}
-}
-
-.choices{
- display:flex;
- gap:18px;
- flex-wrap:wrap;
- justify-content:center;
+ font: bold 12px Arial;
+ letter-spacing:3px;
+ color:#54758c;
  margin:15px;
 }
 
-.choice{
- border:2px solid #e7d9cb;
- border-radius:15px;
- padding:14px;
- background:#fffaf3;
+.card{
+ background:#ffffffdf;
+ border:2px solid white;
+ border-radius:28px;
+ padding:28px 22px;
+ text-align:center;
+ box-shadow:0 12px 35px #31536b18;
+}
+
+h1{
+ color:#18324b;
+ font-size:clamp(28px,7vw,42px);
+}
+
+h2{color:#18324b}
+
+p{line-height:1.6}
+
+.penguin{
+ display:block;
+ font-size:76px;
+ animation:bob 2s infinite ease-in-out;
+}
+
+@keyframes bob{
+ 50%{transform:translateY(-8px)}
+}
+
+button{
+ border:0;
+ border-radius:30px;
+ padding:13px 22px;
+ margin:7px;
+ font-weight:bold;
  cursor:pointer;
- width:145px;
- font-family:'Patrick Hand';
- font-size:21px;
- color:#765c4c;
 }
 
-.mini{
- font-size:43px;
- display:block;
-}
+.primary{background:#18324b;color:white}
+.soft{background:#b9dff0;color:#18324b}
 
-.letter{
- background:#fff7e9;
- border:1px dashed #d8bda1;
- border-radius:8px;
- padding:22px;
- max-width:520px;
- width:100%;
- white-space:pre-wrap;
- line-height:1.8;
- text-align:left;
- font-family:'Patrick Hand';
- font-size:21px;
-}
-
-.creator{
- margin:20px auto;
-}
-
-.creator h2{font-size:34px}
-
-.creator label{
- display:block;
- font-weight:900;
- font-size:13px;
- margin:13px 0 5px;
- color:#7b6658;
-}
+.screen{display:none}
+.screen.active{display:block}
 
 input,textarea{
  width:100%;
- padding:12px;
- border:1px solid #ddcfc0;
- border-radius:9px;
- font:inherit;
- background:#fffdf9;
- color:#4e463f;
+ padding:13px;
+ margin:7px 0 14px;
+ border:1px solid #c9e0e9;
+ border-radius:13px;
+ font:15px Arial;
 }
 
-textarea{
- min-height:110px;
- resize:vertical;
+label{
+ display:block;
+ text-align:left;
+ font:bold 13px Arial;
+ color:#466477;
+ margin-top:8px;
 }
 
-.share{
- background:#edf4f5;
- padding:14px;
- border-radius:10px;
+textarea{min-height:100px}
+
+.memories{
+ background:#f1f9fc;
+ border-radius:18px;
+ padding:15px;
+ margin:12px 0;
+ text-align:left;
+}
+
+.memory{
+ padding:10px;
+ border-bottom:1px dashed #b7d5e2;
+}
+
+.dance{
+ font-size:48px;
+ display:flex;
+ justify-content:center;
+ gap:12px;
+ margin:20px;
+}
+
+.dance span{
+ animation:dance .7s infinite alternate;
+}
+
+.dance span:nth-child(2){animation-delay:.2s}
+.dance span:nth-child(3){animation-delay:.4s}
+
+@keyframes dance{
+ to{transform:translateY(-14px) rotate(12deg)}
+}
+
+.note{
+ background:#fff9e9;
+ border:1px dashed #d7bd8d;
+ border-radius:16px;
+ padding:20px;
+ text-align:left;
+ font:italic 19px/1.7 "Comic Sans MS",cursive;
+ white-space:pre-wrap;
  overflow-wrap:anywhere;
- margin-top:15px;
- font-size:13px;
 }
 
-.small{
- font-size:12px;
- color:#8a8179;
- line-height:1.5;
-}
-
-.spark{
- position:absolute;
- font-size:25px;
- animation:float 2s infinite ease-in-out;
-}
-
-.s1{left:9%;top:15%}
-.s2{right:10%;top:20%}
-.s3{right:14%;bottom:12%}
-
-@keyframes float{
- 50%{transform:translateY(-13px) rotate(12deg)}
+.linkbox{
+ overflow-wrap:anywhere;
+ background:#f0f7fa;
+ padding:12px;
+ border-radius:12px;
+ font:12px Arial;
 }
 </style>
 </head>
 
 <body>
+<div class="wrap">
+
+<div class="brand">✦ POOKIE BIRTHDAY SURPRISES ✦</div>
 
 <!-- CREATOR PAGE -->
+<section id="creator" class="card screen">
+ <span class="penguin">🐧</span>
+ <h1>Create a little surprise</h1>
+ <p>Make a tiny birthday world for someone special.</p>
 
-<div id="creator" class="creator">
+ <label>Birthday person's name</label>
+ <input id="person" placeholder="e.g. Aanya" maxlength="45">
 
-<div class="kicker">🐰 Pookie Birthday Surprises</div>
+ <label>Your name (optional)</label>
+ <input id="sender" placeholder="Your name" maxlength="45">
 
-<h2>Make a tiny birthday world!</h2>
+ <label>Memory moments (one per line)</label>
+ <textarea id="memoriesInput" placeholder="That day we laughed for no reason..."></textarea>
 
-<p>
-Fill this in, create a link, and send your person
-their own interactive bunny surprise.
-</p>
+ <label>Your final handwritten-style message</label>
+ <textarea id="message" placeholder="Write anything you want them to read..."></textarea>
 
-<label>Birthday person's name</label>
-<input id="to" maxlength="35" placeholder="Their name">
-
-<label>Your name / nickname</label>
-<input id="from" maxlength="35" placeholder="Your name">
-
-<label>Write a personal birthday message</label>
-<textarea id="message" maxlength="900"
-placeholder="A little note from your heart..."></textarea>
-
-<label>What should the bunny call them?</label>
-<input id="nickname" maxlength="35" placeholder="Birthday star">
-
-<button class="btn" id="generate">
-Make my surprise link ✨
-</button>
-
-<div id="share" class="share hidden">
-<b>Your unique link is ready!</b>
-<p id="url"></p>
-<button class="btn alt" id="copy">Copy link</button>
-</div>
-
-<p class="small">
-No photos are requested or uploaded.
-Anyone with the link can view the surprise,
-so keep private details out.
-</p>
-
-</div>
-
-
-<!-- BIRTHDAY EXPERIENCE -->
-
-<div id="experience" class="shell hidden">
-
-<section class="screen" id="one">
-
-<div class="kicker">A tiny note for you</div>
-
-<div class="bunny">
-<div class="ear left"></div>
-<div class="ear right"></div>
-<div class="body"></div>
-
-<div class="head">
-<i class="eye l"></i>
-<i class="eye r"></i>
-<i class="nose"></i>
-<i class="cheek l"></i>
-<i class="cheek r"></i>
-<i class="mouth"></i>
-</div>
-
-<i class="arm l"></i>
-<i class="arm r"></i>
-<i class="foot l"></i>
-<i class="foot r"></i>
-</div>
-
-<h1 id="giftTitle">PLS ACCEPT THE GIFT</h1>
-
-<button class="btn" id="yes">YES! ♡</button>
-<button class="btn alt" id="no">NO</button>
-
+ <button class="primary" onclick="makeSurprise()">Create my surprise ✨</button>
+ <p style="font-size:12px">No photos for now. Just penguins and memories. 💙</p>
 </section>
 
 
-<section class="screen hidden" id="two">
+<!-- INTRO -->
+<section id="intro" class="card screen">
+ <span class="penguin">🐧</span>
+ <h1 id="introTitle">A tiny gift is waiting...</h1>
+ <p>Will you accept this very important penguin delivery?</p>
 
-<div class="bunny">
-<div class="ear left"></div>
-<div class="ear right"></div>
-<div class="body"></div>
+ <button class="primary" onclick="go('choose')">YES, of course!</button>
+ <button class="soft" onclick="nope()">NO 🙄</button>
 
-<div class="head">
-<i class="eye l"></i>
-<i class="eye r"></i>
-<i class="nose"></i>
-<i class="cheek l"></i>
-<i class="cheek r"></i>
-<i class="mouth"></i>
-</div>
-
-<i class="arm l"></i>
-<i class="arm r"></i>
-<i class="foot l"></i>
-<i class="foot r"></i>
-</div>
-
-<h2>WHY DID YOU CLICK NO!</h2>
-
-<p>
-The bunny prepared this with so much care…
-try again? 🥺
-</p>
-
-<button class="btn" id="again">TRY AGAIN</button>
-
+ <p id="nopeText"></p>
 </section>
 
 
-<section class="screen hidden" id="three">
+<!-- PENGUIN SELECTION -->
+<section id="choose" class="card screen">
+ <span class="penguin" id="chosenPenguin">🐧</span>
+ <h2>Choose your penguin!</h2>
+ <p>Every penguin is carrying birthday magic.</p>
 
-<div class="kicker">Choose a bunny</div>
+ <button class="soft" onclick="pick('🐧')">🐧</button>
+ <button class="soft" onclick="pick('🐧‍❄️')">🐧‍❄️</button>
+ <button class="soft" onclick="pick('🐧')">🐧</button>
 
-<h2>Each one has something special to say ✨</h2>
+ <p id="penguinLine">A very serious penguin has chosen you.</p>
 
-<div class="choices">
-
-<button class="choice" data-pick="0">
-<span class="mini">🐰🎁</span>
-Little gift
-</button>
-
-<button class="choice" data-pick="1">
-<span class="mini">🐰💌</span>
-Secret note
-</button>
-
-<button class="choice" data-pick="2">
-<span class="mini">🐰⭐</span>
-Birthday magic
-</button>
-
-</div>
-
-<p class="small">Pick whichever bunny is calling your name.</p>
-
+ <button class="primary" onclick="go('reveal')">Continue →</button>
 </section>
 
 
-<section class="screen hidden" id="four">
+<!-- BIRTHDAY REVEAL -->
+<section id="reveal" class="card screen">
+ <div class="dance">
+  <span>🐧</span>
+  <span>🐧</span>
+  <span>🐧</span>
+ </div>
 
-<div class="kicker">Surprise incoming…</div>
+ <h1>HAPPY BIRTHDAY!</h1>
+ <h2 id="birthdayName"></h2>
 
-<h1>HAPPY BIRTHDAY!</h1>
+ <p>Today, the world is a little more wonderful because it's your day! 🎂</p>
 
-<div class="bunny dancing">
-<div class="ear left"></div>
-<div class="ear right"></div>
-<div class="body"></div>
-
-<div class="head">
-<i class="eye l"></i>
-<i class="eye r"></i>
-<i class="nose"></i>
-<i class="cheek l"></i>
-<i class="cheek r"></i>
-<i class="mouth"></i>
-</div>
-
-<i class="arm l"></i>
-<i class="arm r"></i>
-<i class="foot l"></i>
-<i class="foot r"></i>
-</div>
-
-<p>
-The bunny is doing its happiest birthday dance just for you! 🎉
-</p>
-
-<button class="btn" id="letterBtn">
-Open your letter 💌
-</button>
-
+ <button class="primary" onclick="showMemories()">Open your memories →</button>
 </section>
 
 
-<section class="screen hidden" id="five">
+<!-- MEMORIES -->
+<section id="memoryScreen" class="card screen">
+ <h2>📖 Little moments, big memories</h2>
+ <div id="memoryList" class="memories"></div>
 
-<div class="kicker">A little letter</div>
+ <button class="soft" onclick="go('hug')">One more thing →</button>
+</section>
 
-<h2 id="hello"></h2>
 
-<div class="letter" id="letter"></div>
+<!-- HUG -->
+<section id="hug" class="card screen">
+ <span class="penguin">🐧💙</span>
+ <h2>A penguin-sized virtual hug!</h2>
+ <p>Arms are short. Feelings are HUGE.</p>
 
-<p id="signoff"></p>
+ <button class="primary" onclick="go('letter')">Receive your final note 💌</button>
+</section>
 
-<div class="bunny dancing">
-<div class="ear left"></div>
-<div class="ear right"></div>
-<div class="body"></div>
 
-<div class="head">
-<i class="eye l"></i>
-<i class="eye r"></i>
-<i class="nose"></i>
-<i class="cheek l"></i>
-<i class="cheek r"></i>
-<i class="mouth"></i>
-</div>
+<!-- FINAL MESSAGE -->
+<section id="letter" class="card screen">
+ <h2>💌 A little note for you</h2>
 
-<i class="arm l"></i>
-<i class="arm r"></i>
-<i class="foot l"></i>
-<i class="foot r"></i>
-</div>
+ <div id="finalNote" class="note"></div>
+ <p id="signature"></p>
 
-<h2>Keep shining, birthday human! ♡</h2>
+ <button class="soft" onclick="go('end')">The end? →</button>
+</section>
 
+
+<!-- END -->
+<section id="end" class="card screen">
+ <span class="penguin">🐧</span>
+ <h1>That's all, penguin!</h1>
+ <p>May your year be full of soft days, loud laughter and lovely surprises.</p>
+
+ <button class="primary" onclick="go('intro')">Replay ✨</button>
+</section>
+
+
+<!-- SHARE LINK -->
+<section id="created" class="card screen">
+ <span class="penguin">🐧</span>
+ <h1>Your surprise is ready!</h1>
+ <p>Copy this unique link and send it to your person.</p>
+
+ <div id="shareLink" class="linkbox"></div>
+
+ <button class="primary" onclick="copyLink()">COPY SHARE LINK</button>
+ <p id="copyStatus"></p>
+
+ <button class="soft" onclick="previewGift()">Preview surprise →</button>
+ <button class="soft" onclick="go('creator')">Create another</button>
 </section>
 
 </div>
@@ -567,126 +279,222 @@ Open your letter 💌
 
 <script>
 
-const $ = id => document.getElementById(id);
+let currentData=null;
 
-
-// Encode birthday details into a share link
-
-function enc(obj){
- let b = btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
- return b.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-}
-
-function dec(s){
- s=s.replace(/-/g,'+').replace(/_/g,'/');
- while(s.length%4)s+='=';
- return JSON.parse(decodeURIComponent(escape(atob(s))));
-}
-
-
-// Switch between birthday screens
-
-function show(id){
- document.querySelectorAll('.screen').forEach(x=>{
-  x.classList.add('hidden');
+function go(id){
+ document.querySelectorAll('.screen').forEach(s=>{
+  s.classList.remove('active');
  });
- $(id).classList.remove('hidden');
+ document.getElementById(id).classList.add('active');
+ window.scrollTo(0,0);
 }
 
 
-// Load the recipient's surprise
+// ENCODE DATA FOR SHARE LINK
+function encodeData(obj){
+ const bytes=new TextEncoder().encode(JSON.stringify(obj));
+ let binary='';
 
-function experience(d){
+ bytes.forEach(b=>{
+  binary+=String.fromCharCode(b);
+ });
 
- $('creator').classList.add('hidden');
- $('experience').classList.remove('hidden');
-
- $('giftTitle').textContent =
- 'PLS ACCEPT THE GIFT, ' +
- (d.to || 'BIRTHDAY STAR').toUpperCase() + '!';
-
- $('hello').textContent =
- 'Dear ' + (d.to || 'birthday star') + ',';
-
- $('letter').textContent =
- d.message ||
- 'Wishing you a day full of smiles, lovely surprises and all your favourite things!';
-
- $('signoff').textContent =
- 'With love, ' + (d.from || 'your secret bunny fan') + ' 🐰';
+ return btoa(binary)
+ .replace(/\+/g,'-')
+ .replace(/\//g,'_')
+ .replace(/=+$/,'');
 }
 
 
-// Generate unique share link
+// DECODE SHARE LINK
+function decodeData(str){
+ str=str.replace(/-/g,'+').replace(/_/g,'/');
 
-$('generate').onclick = () => {
+ while(str.length%4) str+='=';
 
- let d = {
-  to:$('to').value.trim() || 'Birthday star',
-  from:$('from').value.trim(),
-  message:$('message').value.trim(),
-  nickname:$('nickname').value.trim()
+ const binary=atob(str);
+ const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
+
+ return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+
+// CREATE SURPRISE
+function makeSurprise(){
+
+ const person=document.getElementById('person').value.trim();
+ const sender=document.getElementById('sender').value.trim();
+ const message=document.getElementById('message').value.trim();
+
+ const memories=document.getElementById('memoriesInput')
+ .value.split('\n')
+ .map(x=>x.trim())
+ .filter(Boolean);
+
+ if(!person){
+  alert("Enter the birthday person's name!");
+  return;
+ }
+
+ if(!message){
+  alert("Write your final message first!");
+  return;
+ }
+
+ currentData={
+  id:Date.now().toString(36)+Math.random().toString(36).slice(2),
+  person,
+  sender,
+  message,
+  memories
  };
 
- let link =
- location.href.split('#')[0] + '#surprise=' + enc(d);
+ const link=location.href.split('#')[0]+'#gift='+encodeData(currentData);
 
- $('url').textContent = link;
- $('share').classList.remove('hidden');
-};
+ document.getElementById('shareLink').textContent=link;
 
-
-// Copy share link
-
-$('copy').onclick = async () => {
-
- try{
-  await navigator.clipboard.writeText($('url').textContent);
-  $('copy').textContent = 'Copied! ✓';
- }
- catch(e){
-  $('copy').textContent = 'Long-press the link above to copy';
- }
-
-};
-
-
-// YES and NO interactions
-
-$('yes').onclick = () => show('three');
-
-$('no').onclick = () => show('two');
-
-$('again').onclick = () => show('one');
-
-
-// Bunny selection
-
-document.querySelectorAll('[data-pick]').forEach(button=>{
- button.onclick = () => show('four');
-});
-
-
-// Birthday letter
-
-$('letterBtn').onclick = () => show('five');
-
-
-// Check whether this is a shared surprise link
-
-if(location.hash.startsWith('#surprise=')){
-
- try{
-  experience(dec(location.hash.slice(10)));
-  show('one');
- }
- catch(e){
-  console.log('Could not load surprise');
- }
-
+ go('created');
 }
 
-</script>
 
+// COPY LINK
+function copyLink(){
+
+ const link=document.getElementById('shareLink').textContent;
+
+ if(navigator.clipboard && window.isSecureContext){
+
+  navigator.clipboard.writeText(link)
+  .then(()=>{
+   document.getElementById('copyStatus').textContent='Copied! 💙';
+  })
+  .catch(()=>fallbackCopy(link));
+
+ }else{
+  fallbackCopy(link);
+ }
+}
+
+
+function fallbackCopy(link){
+
+ const box=document.createElement('textarea');
+ box.value=link;
+
+ document.body.appendChild(box);
+ box.select();
+
+ try{
+  document.execCommand('copy');
+  document.getElementById('copyStatus').textContent='Copied! 💙';
+ }catch(e){
+  document.getElementById('copyStatus').textContent='Please copy the link manually.';
+ }
+
+ box.remove();
+}
+
+
+// PREVIEW
+function previewGift(){
+
+ const link=document.getElementById('shareLink').textContent;
+ location.hash=link.split('#')[1];
+
+ loadGift();
+}
+
+
+// LOAD SHARED SURPRISE
+function loadGift(){
+
+ if(!location.hash.startsWith('#gift=')){
+  go('creator');
+  return;
+ }
+
+ try{
+
+  currentData=decodeData(location.hash.slice(6));
+
+  document.getElementById('introTitle').textContent=
+  'A tiny gift for '+currentData.person+'...';
+
+  document.getElementById('birthdayName').textContent=
+  currentData.person+' 🎈';
+
+  document.getElementById('finalNote').textContent=
+  currentData.message;
+
+  document.getElementById('signature').textContent=
+  currentData.sender?'— With love, '+currentData.sender:'';
+
+  go('intro');
+
+ }catch(e){
+  alert('This surprise link seems incomplete.');
+  go('creator');
+ }
+}
+
+
+// NO BUTTON
+function nope(){
+
+ const lines=[
+  "Are you sure? This penguin practised all day! 🥺",
+  "The penguin is filing a tiny complaint...",
+  "One more chance? Pretty please? 🐧"
+ ];
+
+ document.getElementById('nopeText').textContent=
+ lines[Math.floor(Math.random()*lines.length)]+' Try again!';
+}
+
+
+// PENGUIN PICKER
+function pick(emoji){
+
+ document.getElementById('chosenPenguin').textContent=emoji;
+
+ document.getElementById('penguinLine').textContent=
+ 'Excellent choice. This penguin approves!';
+}
+
+
+// MEMORIES
+function showMemories(){
+
+ const list=document.getElementById('memoryList');
+ list.innerHTML='';
+
+ const moments=currentData.memories||[];
+
+ if(!moments.length){
+
+  list.textContent=
+  'The best memories are still waiting to happen. 💙';
+
+ }else{
+
+  moments.forEach(moment=>{
+
+   const item=document.createElement('div');
+   item.className='memory';
+   item.textContent='✦ '+moment;
+
+   list.appendChild(item);
+
+  });
+
+ }
+
+ go('memoryScreen');
+}
+
+
+window.addEventListener('load',loadGift);
+
+</script>
 </body>
- </html>
+</html>
