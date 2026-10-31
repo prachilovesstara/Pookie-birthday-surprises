@@ -2,81 +2,691 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pookie Birthday Surprises 🐰</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tiny birthday surprise 🐰</title>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-:root{--blue:#a9c9e8;--deep:#345878;--cream:#fffaf0;--pink:#f6dce4;--ink:#34495e}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background-color:var(--cream);background-image:linear-gradient(90deg,rgba(132,174,211,.16) 1px,transparent 1px),linear-gradient(rgba(132,174,211,.16) 1px,transparent 1px);background-size:28px 28px}
-button,input,textarea{font:inherit}button{cursor:pointer;border:0}
-.top{padding:17px 22px;display:flex;justify-content:space-between;align-items:center;background:#fffaf0dd;backdrop-filter:blur(10px);border-bottom:1px solid #d9e5ef}
-.brand{font-weight:700;color:var(--deep);letter-spacing:.3px}.brand span{font-size:24px;vertical-align:middle;margin-right:7px}
-.wrap{width:min(900px,92%);margin:35px auto 70px}
-.card{background:#fffdf8;border:1px solid #dce8f1;border-radius:25px;padding:clamp(22px,5vw,42px);box-shadow:0 12px 35px #54728b12}
-h1,h2{font-family:'Playfair Display',serif;color:var(--deep)}h1{font-size:clamp(34px,7vw,57px);line-height:1.08;margin:10px 0}h2{font-size:30px;margin:0 0 12px}
-.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#7296b6}
-.sub{line-height:1.7;color:#687d90}.bunny{font-size:76px;display:block;filter:drop-shadow(0 5px 2px #9bb9d133)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:700;color:#496783}input,textarea{width:100%;border:1px solid #d5e2ed;border-radius:13px;padding:13px 14px;background:#fff;color:#34495e;outline:none}input:focus,textarea:focus{border-color:#7fa9cf;box-shadow:0 0 0 3px #b8d3eb55}textarea{min-height:130px;resize:vertical}
-.themes{display:flex;gap:10px;flex-wrap:wrap}.theme{padding:10px 15px;border-radius:30px;border:1px solid #d5e2ed;background:white;color:#496783}.theme.active{background:#dceaf6;border-color:#7fa9cf}
-.primary{background:var(--deep);color:white;padding:14px 22px;border-radius:30px;font-weight:700;box-shadow:0 5px 0 #223f59;margin-top:22px}.primary:hover{transform:translateY(-1px)}.secondary{background:#edf4fa;color:var(--deep);padding:12px 18px;border-radius:25px;font-weight:700}
-.note{font-size:12px;line-height:1.6;color:#7b8c9b;margin-top:15px}
-.hidden{display:none!important}.center{text-align:center}.screen{min-height:430px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.screen p{max-width:540px;line-height:1.8;color:#63788b;white-space:pre-wrap}.letter{background:#fff8e9;border:1px dashed #d6bd91;padding:24px;border-radius:17px;max-width:580px;width:100%;text-align:left;line-height:1.9;white-space:pre-wrap;margin:14px auto;color:#5e5b51}.pill{display:inline-block;background:#eaf2f9;color:#547a9e;padding:7px 13px;border-radius:20px;font-size:12px;font-weight:700}
-#linkBox{margin-top:20px;padding:18px;background:#eef5fb;border-radius:16px;overflow-wrap:anywhere}#shareUrl{font-size:13px;color:#345878;word-break:break-all}
-.foot{text-align:center;font-size:12px;color:#8293a1;margin:24px}
-@media(max-width:620px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.wrap{margin-top:22px}.top{padding:14px 16px}}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&family=Patrick+Hand&display=swap');
+
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ min-height:100vh;
+ background:#fffdf8;
+ color:#4e463f;
+ font-family:Nunito,sans-serif;
+ display:grid;
+ place-items:center;
+ padding:18px;
+ background-image:radial-gradient(#e7d9c9 1px,transparent 1px);
+ background-size:18px 18px;
+}
+
+.shell,.creator{
+ width:min(720px,100%);
+ background:#fffefa;
+ border:2px solid #e9dfd2;
+ border-radius:15px;
+ padding:clamp(20px,5vw,40px);
+ box-shadow:0 12px 35px #55432b18;
+ position:relative;
+ overflow:hidden;
+}
+
+.screen{
+ min-height:455px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ animation:appear .45s ease;
+}
+
+.hidden{display:none!important}
+
+h1,h2{
+ font-family:'Patrick Hand',cursive;
+ color:#bd654d;
+ margin:8px 0;
+}
+
+h1{font-size:clamp(38px,8vw,58px)}
+h2{font-size:clamp(28px,6vw,40px)}
+
+p{
+ font-size:17px;
+ line-height:1.65;
+ max-width:520px;
+}
+
+.kicker{
+ font-size:13px;
+ letter-spacing:2px;
+ text-transform:uppercase;
+ color:#8c9e9e;
+ font-weight:900;
+}
+
+.btn{
+ border:0;
+ border-radius:30px;
+ background:#d96f50;
+ color:white;
+ padding:12px 26px;
+ font-weight:900;
+ font-size:17px;
+ box-shadow:0 4px 0 #b8563e;
+ cursor:pointer;
+ margin:8px;
+}
+
+.btn.alt{
+ background:#89aeb8;
+ box-shadow:0 4px 0 #668d97;
+}
+
+.bunny{
+ width:160px;
+ height:180px;
+ position:relative;
+ margin:15px auto;
+ transform-origin:bottom center;
+}
+
+.ear{
+ position:absolute;
+ top:0;
+ width:38px;
+ height:92px;
+ background:white;
+ border:3px solid #63584f;
+ border-radius:50%;
+}
+
+.ear.left{
+ left:37px;
+ transform:rotate(-17deg);
+}
+
+.ear.right{
+ right:37px;
+ transform:rotate(17deg);
+}
+
+.ear:after{
+ content:"";
+ position:absolute;
+ inset:10px 9px;
+ background:#efb8b5;
+ border-radius:50%;
+}
+
+.head{
+ position:absolute;
+ top:55px;
+ left:22px;
+ width:116px;
+ height:105px;
+ background:white;
+ border:3px solid #63584f;
+ border-radius:48%;
+ z-index:2;
+}
+
+.eye{
+ position:absolute;
+ top:40px;
+ width:7px;
+ height:9px;
+ background:#51463f;
+ border-radius:50%;
+}
+
+.eye.l{left:31px}
+.eye.r{right:31px}
+
+.nose{
+ position:absolute;
+ top:55px;
+ left:53px;
+ width:10px;
+ height:7px;
+ background:#e99b9c;
+ border-radius:50%;
+}
+
+.cheek{
+ position:absolute;
+ top:58px;
+ width:17px;
+ height:9px;
+ background:#f4c8c0;
+ border-radius:50%;
+}
+
+.cheek.l{left:13px}
+.cheek.r{right:13px}
+
+.mouth{
+ position:absolute;
+ top:63px;
+ left:54px;
+ width:10px;
+ height:8px;
+ border-bottom:2px solid #63584f;
+ border-radius:50%;
+}
+
+.body{
+ position:absolute;
+ bottom:-18px;
+ left:37px;
+ width:44px;
+ height:38px;
+ background:white;
+ border:3px solid #63584f;
+ border-radius:50%;
+}
+
+.foot{
+ position:absolute;
+ bottom:-20px;
+ width:33px;
+ height:18px;
+ background:white;
+ border:3px solid #63584f;
+ border-radius:50%;
+ z-index:3;
+}
+
+.foot.l{left:35px}
+.foot.r{right:35px}
+
+.arm{
+ position:absolute;
+ top:118px;
+ width:32px;
+ height:12px;
+ background:white;
+ border:3px solid #63584f;
+ border-radius:15px;
+ z-index:3;
+}
+
+.arm.l{left:7px}
+.arm.r{right:7px}
+
+.dancing{
+ animation:dance .48s infinite alternate ease-in-out;
+}
+
+.dancing .arm.l{
+ animation:wave .35s infinite alternate;
+}
+
+.dancing .arm.r{
+ animation:wave .35s infinite alternate-reverse;
+}
+
+@keyframes dance{
+ from{transform:rotate(-9deg) translateY(0)}
+ to{transform:rotate(9deg) translateY(-12px)}
+}
+
+@keyframes wave{
+ from{transform:rotate(-35deg)}
+ to{transform:rotate(40deg)}
+}
+
+@keyframes appear{
+ from{opacity:0;transform:translateY(12px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+.choices{
+ display:flex;
+ gap:18px;
+ flex-wrap:wrap;
+ justify-content:center;
+ margin:15px;
+}
+
+.choice{
+ border:2px solid #e7d9cb;
+ border-radius:15px;
+ padding:14px;
+ background:#fffaf3;
+ cursor:pointer;
+ width:145px;
+ font-family:'Patrick Hand';
+ font-size:21px;
+ color:#765c4c;
+}
+
+.mini{
+ font-size:43px;
+ display:block;
+}
+
+.letter{
+ background:#fff7e9;
+ border:1px dashed #d8bda1;
+ border-radius:8px;
+ padding:22px;
+ max-width:520px;
+ width:100%;
+ white-space:pre-wrap;
+ line-height:1.8;
+ text-align:left;
+ font-family:'Patrick Hand';
+ font-size:21px;
+}
+
+.creator{
+ margin:20px auto;
+}
+
+.creator h2{font-size:34px}
+
+.creator label{
+ display:block;
+ font-weight:900;
+ font-size:13px;
+ margin:13px 0 5px;
+ color:#7b6658;
+}
+
+input,textarea{
+ width:100%;
+ padding:12px;
+ border:1px solid #ddcfc0;
+ border-radius:9px;
+ font:inherit;
+ background:#fffdf9;
+ color:#4e463f;
+}
+
+textarea{
+ min-height:110px;
+ resize:vertical;
+}
+
+.share{
+ background:#edf4f5;
+ padding:14px;
+ border-radius:10px;
+ overflow-wrap:anywhere;
+ margin-top:15px;
+ font-size:13px;
+}
+
+.small{
+ font-size:12px;
+ color:#8a8179;
+ line-height:1.5;
+}
+
+.spark{
+ position:absolute;
+ font-size:25px;
+ animation:float 2s infinite ease-in-out;
+}
+
+.s1{left:9%;top:15%}
+.s2{right:10%;top:20%}
+.s3{right:14%;bottom:12%}
+
+@keyframes float{
+ 50%{transform:translateY(-13px) rotate(12deg)}
+}
 </style>
 </head>
+
 <body>
-<header class="top"><div class="brand"><span>🐰</span> Pookie Birthday Surprises</div><span class="pill">a little world of wishes</span></header>
-<main class="wrap">
-<section id="creator" class="card">
-<div class="center"><span class="bunny">🐰</span><div class="eyebrow">make a little magic</div><h1>Create a birthday surprise</h1><p class="sub">Build a tiny birthday journey, then send your person their very own link. No photo uploads. Just words, wishes and bunny magic.</p></div>
-<div class="grid">
-<div class="field"><label for="to">Who's celebrating?</label><input id="to" maxlength="35" placeholder="e.g. Aanya"></div>
-<div class="field"><label for="from">Your name / nickname</label><input id="from" maxlength="35" placeholder="e.g. their favourite human"></div>
-<div class="field full"><label>Choose a little mood</label><div class="themes"><button class="theme active" data-theme="blue" type="button">🩵 Blue skies</button><button class="theme" data-theme="pink" type="button">🎀 Strawberry cream</button><button class="theme" data-theme="sun" type="button">🌼 Sunny day</button></div></div>
-<div class="field full"><label for="question">A fun question for them</label><input id="question" maxlength="100" placeholder="e.g. Ready for your tiny surprise?"></div>
-<div class="field full"><label for="message">Write your birthday letter</label><textarea id="message" maxlength="900" placeholder="Write something only they would understand..."></textarea></div>
+
+<!-- CREATOR PAGE -->
+
+<div id="creator" class="creator">
+
+<div class="kicker">🐰 Pookie Birthday Surprises</div>
+
+<h2>Make a tiny birthday world!</h2>
+
+<p>
+Fill this in, create a link, and send your person
+their own interactive bunny surprise.
+</p>
+
+<label>Birthday person's name</label>
+<input id="to" maxlength="35" placeholder="Their name">
+
+<label>Your name / nickname</label>
+<input id="from" maxlength="35" placeholder="Your name">
+
+<label>Write a personal birthday message</label>
+<textarea id="message" maxlength="900"
+placeholder="A little note from your heart..."></textarea>
+
+<label>What should the bunny call them?</label>
+<input id="nickname" maxlength="35" placeholder="Birthday star">
+
+<button class="btn" id="generate">
+Make my surprise link ✨
+</button>
+
+<div id="share" class="share hidden">
+<b>Your unique link is ready!</b>
+<p id="url"></p>
+<button class="btn alt" id="copy">Copy link</button>
 </div>
-<button id="make" class="primary">Create their surprise link ✨</button>
-<div id="linkBox" class="hidden"><strong>Your share link is ready! 🐇</strong><p id="shareUrl"></p><button id="copy" class="secondary" type="button">Copy link</button><p class="note">Your message is carried inside this unique link. There are no photo uploads or image storage. Anyone who has the link can read the surprise, so share it only with the intended person.</p></div>
-<p class="note">Tip: publish this website on GitHub Pages first. Then create the link from the live website so it opens for your recipient.</p>
+
+<p class="small">
+No photos are requested or uploaded.
+Anyone with the link can view the surprise,
+so keep private details out.
+</p>
+
+</div>
+
+
+<!-- BIRTHDAY EXPERIENCE -->
+
+<div id="experience" class="shell hidden">
+
+<section class="screen" id="one">
+
+<div class="kicker">A tiny note for you</div>
+
+<div class="bunny">
+<div class="ear left"></div>
+<div class="ear right"></div>
+<div class="body"></div>
+
+<div class="head">
+<i class="eye l"></i>
+<i class="eye r"></i>
+<i class="nose"></i>
+<i class="cheek l"></i>
+<i class="cheek r"></i>
+<i class="mouth"></i>
+</div>
+
+<i class="arm l"></i>
+<i class="arm r"></i>
+<i class="foot l"></i>
+<i class="foot r"></i>
+</div>
+
+<h1 id="giftTitle">PLS ACCEPT THE GIFT</h1>
+
+<button class="btn" id="yes">YES! ♡</button>
+<button class="btn alt" id="no">NO</button>
+
 </section>
 
-<section id="experience" class="card hidden">
-<div id="s1" class="screen"><span class="bunny">🐰</span><span class="pill">a message for <b id="recipient1"></b></span><h1>Hey, you!</h1><p id="introText">A tiny bunny has been waiting to give you something...</p><button class="primary" id="start">Open your surprise →</button></div>
-<div id="s2" class="screen hidden"><span class="bunny">🐰💌</span><div class="eyebrow">important bunny business</div><h2 id="questionView">Ready for a little surprise?</h2><p>Take a deep breath. This next bit was made just for you.</p><button class="primary" id="reveal">I'm ready! ✨</button><button class="secondary" id="notReady">Wait, let me build suspense</button></div>
-<div id="s3" class="screen hidden"><span class="bunny">🎂🐰</span><div class="eyebrow">today is your day</div><h1>Happy Birthday, <span id="recipient2"></span>!</h1><p>May your year be sprinkled with lovely little surprises, big laughs and people who make you feel at home.</p><div class="letter"><div class="eyebrow">a little note from <span id="senderView"></span></div><div id="letterView"></div></div><button class="primary" id="finish">One last thing →</button></div>
-<div id="s4" class="screen hidden"><span class="bunny">🐰⭐</span><h1>Keep being wonderfully you.</h1><p>This little birthday world was made with care, just for you.</p><span class="pill">the end… and a new beginning ♡</span></div>
+
+<section class="screen hidden" id="two">
+
+<div class="bunny">
+<div class="ear left"></div>
+<div class="ear right"></div>
+<div class="body"></div>
+
+<div class="head">
+<i class="eye l"></i>
+<i class="eye r"></i>
+<i class="nose"></i>
+<i class="cheek l"></i>
+<i class="cheek r"></i>
+<i class="mouth"></i>
+</div>
+
+<i class="arm l"></i>
+<i class="arm r"></i>
+<i class="foot l"></i>
+<i class="foot r"></i>
+</div>
+
+<h2>WHY DID YOU CLICK NO!</h2>
+
+<p>
+The bunny prepared this with so much care…
+try again? 🥺
+</p>
+
+<button class="btn" id="again">TRY AGAIN</button>
+
 </section>
-</main>
-<div class="foot">Made with a little extra love and one very busy bunny. 🐰</div>
+
+
+<section class="screen hidden" id="three">
+
+<div class="kicker">Choose a bunny</div>
+
+<h2>Each one has something special to say ✨</h2>
+
+<div class="choices">
+
+<button class="choice" data-pick="0">
+<span class="mini">🐰🎁</span>
+Little gift
+</button>
+
+<button class="choice" data-pick="1">
+<span class="mini">🐰💌</span>
+Secret note
+</button>
+
+<button class="choice" data-pick="2">
+<span class="mini">🐰⭐</span>
+Birthday magic
+</button>
+
+</div>
+
+<p class="small">Pick whichever bunny is calling your name.</p>
+
+</section>
+
+
+<section class="screen hidden" id="four">
+
+<div class="kicker">Surprise incoming…</div>
+
+<h1>HAPPY BIRTHDAY!</h1>
+
+<div class="bunny dancing">
+<div class="ear left"></div>
+<div class="ear right"></div>
+<div class="body"></div>
+
+<div class="head">
+<i class="eye l"></i>
+<i class="eye r"></i>
+<i class="nose"></i>
+<i class="cheek l"></i>
+<i class="cheek r"></i>
+<i class="mouth"></i>
+</div>
+
+<i class="arm l"></i>
+<i class="arm r"></i>
+<i class="foot l"></i>
+<i class="foot r"></i>
+</div>
+
+<p>
+The bunny is doing its happiest birthday dance just for you! 🎉
+</p>
+
+<button class="btn" id="letterBtn">
+Open your letter 💌
+</button>
+
+</section>
+
+
+<section class="screen hidden" id="five">
+
+<div class="kicker">A little letter</div>
+
+<h2 id="hello"></h2>
+
+<div class="letter" id="letter"></div>
+
+<p id="signoff"></p>
+
+<div class="bunny dancing">
+<div class="ear left"></div>
+<div class="ear right"></div>
+<div class="body"></div>
+
+<div class="head">
+<i class="eye l"></i>
+<i class="eye r"></i>
+<i class="nose"></i>
+<i class="cheek l"></i>
+<i class="cheek r"></i>
+<i class="mouth"></i>
+</div>
+
+<i class="arm l"></i>
+<i class="arm r"></i>
+<i class="foot l"></i>
+<i class="foot r"></i>
+</div>
+
+<h2>Keep shining, birthday human! ♡</h2>
+
+</section>
+
+</div>
+
+
 <script>
-const $=id=>document.getElementById(id);
-let selectedTheme='blue';
-const palettes={blue:['#a9c9e8','#345878','#fffaf0'],pink:['#f2cbd8','#8d5369','#fff8f8'],sun:['#f3d78e','#80602d','#fffaf0']};
-document.querySelectorAll('.theme').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.theme').forEach(x=>x.classList.remove('active'));btn.classList.add('active');selectedTheme=btn.dataset.theme;}));
-function encode(obj){const bytes=new TextEncoder().encode(JSON.stringify(obj));let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
-function decode(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';const binary=atob(str);const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));return JSON.parse(new TextDecoder().decode(bytes));}
-function showExperience(data){
- $('creator').classList.add('hidden');$('experience').classList.remove('hidden');
- const [bg,ink,paper]=palettes[data.theme]||palettes.blue;document.documentElement.style.setProperty('--blue',bg);document.documentElement.style.setProperty('--deep',ink);document.documentElement.style.setProperty('--cream',paper);
- $('recipient1').textContent=data.to;$('recipient2').textContent=data.to;$('senderView').textContent=data.from||'someone who cares';$('questionView').textContent=data.question||'Ready for a little surprise?';$('letterView').textContent=data.message||'Wishing you the happiest birthday. You deserve lovely things.';
- $('introText').textContent='A tiny bunny has been waiting to give you something, '+data.to+'...';
+
+const $ = id => document.getElementById(id);
+
+
+// Encode birthday details into a share link
+
+function enc(obj){
+ let b = btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+ return b.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
 }
-function step(n){['s1','s2','s3','s4'].forEach((id,i)=>$(id).classList.toggle('hidden',i!==n-1));}
-$('make').addEventListener('click',()=>{
- const data={to:$('to').value.trim()||'birthday star',from:$('from').value.trim(),question:$('question').value.trim(),message:$('message').value.trim(),theme:selectedTheme};
- const url=location.href.split('#')[0]+'#surprise='+encode(data);
- $('shareUrl').textContent=url;$('linkBox').classList.remove('hidden');
- $('copy').textContent='Copy link';
+
+function dec(s){
+ s=s.replace(/-/g,'+').replace(/_/g,'/');
+ while(s.length%4)s+='=';
+ return JSON.parse(decodeURIComponent(escape(atob(s))));
+}
+
+
+// Switch between birthday screens
+
+function show(id){
+ document.querySelectorAll('.screen').forEach(x=>{
+  x.classList.add('hidden');
+ });
+ $(id).classList.remove('hidden');
+}
+
+
+// Load the recipient's surprise
+
+function experience(d){
+
+ $('creator').classList.add('hidden');
+ $('experience').classList.remove('hidden');
+
+ $('giftTitle').textContent =
+ 'PLS ACCEPT THE GIFT, ' +
+ (d.to || 'BIRTHDAY STAR').toUpperCase() + '!';
+
+ $('hello').textContent =
+ 'Dear ' + (d.to || 'birthday star') + ',';
+
+ $('letter').textContent =
+ d.message ||
+ 'Wishing you a day full of smiles, lovely surprises and all your favourite things!';
+
+ $('signoff').textContent =
+ 'With love, ' + (d.from || 'your secret bunny fan') + ' 🐰';
+}
+
+
+// Generate unique share link
+
+$('generate').onclick = () => {
+
+ let d = {
+  to:$('to').value.trim() || 'Birthday star',
+  from:$('from').value.trim(),
+  message:$('message').value.trim(),
+  nickname:$('nickname').value.trim()
+ };
+
+ let link =
+ location.href.split('#')[0] + '#surprise=' + enc(d);
+
+ $('url').textContent = link;
+ $('share').classList.remove('hidden');
+};
+
+
+// Copy share link
+
+$('copy').onclick = async () => {
+
+ try{
+  await navigator.clipboard.writeText($('url').textContent);
+  $('copy').textContent = 'Copied! ✓';
+ }
+ catch(e){
+  $('copy').textContent = 'Long-press the link above to copy';
+ }
+
+};
+
+
+// YES and NO interactions
+
+$('yes').onclick = () => show('three');
+
+$('no').onclick = () => show('two');
+
+$('again').onclick = () => show('one');
+
+
+// Bunny selection
+
+document.querySelectorAll('[data-pick]').forEach(button=>{
+ button.onclick = () => show('four');
 });
-$('copy').addEventListener('click',async()=>{const url=$('shareUrl').textContent;try{await navigator.clipboard.writeText(url);$('copy').textContent='Copied! ✓';}catch(e){$('copy').textContent='Select and copy the link above';}});
-$('start').addEventListener('click',()=>step(2));
-$('reveal').addEventListener('click',()=>step(3));
-$('notReady').addEventListener('click',()=>{$('notReady').textContent='Okay okay, now I am ready 😄';});
-$('finish').addEventListener('click',()=>step(4));
-if(location.hash.startsWith('#surprise=')){try{const data=decode(location.hash.slice(10));showExperience(data);}catch(e){$('creator').classList.remove('hidden');}}
+
+
+// Birthday letter
+
+$('letterBtn').onclick = () => show('five');
+
+
+// Check whether this is a shared surprise link
+
+if(location.hash.startsWith('#surprise=')){
+
+ try{
+  experience(dec(location.hash.slice(10)));
+  show('one');
+ }
+ catch(e){
+  console.log('Could not load surprise');
+ }
+
+}
+
 </script>
+
 </body>
-</html>
+ </html>
