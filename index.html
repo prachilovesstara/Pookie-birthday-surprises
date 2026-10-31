@@ -3,125 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#dcecff">
-<title>Pookie Birthday Surprises ♡</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<title>Pookie Birthday Surprises 🐰</title>
 <style>
-:root{--ink:#24466b;--muted:#66809e;--blue:#7da9d8;--blue2:#b9d5f3;--pale:#eff6ff;--paper:#fffdf8;--pink:#f5c9d8;--yellow:#f8e5a6;--lav:#dcd5f5;--shadow:0 18px 50px #527aa51c;--radius:25px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"DM Sans",sans-serif;background-color:#edf5ff;background-image:linear-gradient(90deg,#d8e8f8 50%,transparent 50%),linear-gradient(#d8e8f8 50%,transparent 50%);background-size:56px 56px;background-position:0 0; background-attachment:fixed}
-button,input,textarea,select{font:inherit}button{cursor:pointer}.site-wrap{max-width:1180px;margin:auto;padding:18px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 18px;background:#ffffffd9;border:1px solid #fff;border-radius:20px;box-shadow:var(--shadow);position:sticky;top:12px;z-index:10;backdrop-filter:blur(12px)}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.5px}.brand-mark{width:42px;height:42px;border-radius:14px;background:#e4efff;display:grid;place-items:center;font-size:24px}.brand span:last-child{font-family:"Playfair Display",serif;font-size:18px}.nav{display:flex;gap:8px;align-items:center}.nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:700;padding:10px 13px;border-radius:12px}.nav a:hover{background:#edf5ff;color:var(--ink)}.pill{border:0;border-radius:999px;padding:12px 18px;background:var(--ink);color:white;font-weight:700;box-shadow:0 7px 16px #24466b22}.pill:hover{transform:translateY(-2px);filter:brightness(1.08)}.pill.light{background:#fff;color:var(--ink);border:1px solid #dce8f5;box-shadow:none}.hero{position:relative;overflow:hidden;margin:22px 0 28px;padding:clamp(34px,7vw,82px) 24px;text-align:center;border:1px solid #fff;border-radius:32px;background:linear-gradient(135deg,#fafdffed,#eaf4ffed);box-shadow:var(--shadow)}
-.hero:before,.hero:after{content:"";position:absolute;width:210px;height:210px;border:1px dashed #8eb4dc77;border-radius:50%;pointer-events:none}.hero:before{left:-100px;top:-90px}.hero:after{right:-100px;bottom:-110px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#fff;border:1px solid #e5eef8;border-radius:999px;color:#6486aa;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}.hero h1{font:800 clamp(42px,8vw,82px)/1.04 "Playfair Display",serif;letter-spacing:-2.8px;margin:22px auto 15px;max-width:850px}.hero h1 em{font-family:Pacifico,cursive;font-weight:400;color:#6598cc;font-style:normal;letter-spacing:-2px}.hero p{max-width:560px;margin:0 auto 25px;color:#637f9f;font-size:17px;line-height:1.75}.hero-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap}.hero-art{display:flex;justify-content:center;align-items:center;gap:14px;margin:28px auto 0;font-size:clamp(27px,5vw,44px)}.sticker{display:inline-grid;place-items:center;width:65px;height:65px;border-radius:20px;background:#fff;box-shadow:0 8px 20px #547aa51a;transform:rotate(-7deg)}.sticker:nth-child(2){transform:rotate(6deg);background:#fff8e8}.sticker:nth-child(3){transform:rotate(-3deg);background:#fff0f5}.sticker:nth-child(4){transform:rotate(7deg);background:#f4f0ff}
-.section-head{text-align:center;margin:50px 0 22px}.section-head small{font-weight:800;letter-spacing:1.8px;color:#7c9fc3;text-transform:uppercase}.section-head h2{font:700 clamp(28px,5vw,42px) "Playfair Display",serif;margin:8px 0}.section-head p{color:var(--muted);margin:0}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{background:#ffffffed;border:1px solid #fff;border-radius:23px;padding:23px;box-shadow:var(--shadow);min-height:185px}.feature .icon{font-size:31px}.feature h3{font:700 20px "Playfair Display",serif;margin:13px 0 7px}.feature p{color:var(--muted);line-height:1.6;margin:0;font-size:14px}
-.builder{margin:55px 0 30px;background:#fffdf9;border:1px solid #fff;border-radius:30px;padding:clamp(18px,4vw,34px);box-shadow:var(--shadow)}.builder-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}.builder-head h2{font:700 clamp(27px,5vw,40px) "Playfair Display",serif;margin:5px 0}.builder-head p{color:var(--muted);margin:0;line-height:1.6}.builder-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.85fr);gap:24px;margin-top:25px}.form-panel{display:grid;gap:15px}.field label{display:block;font-size:13px;font-weight:800;margin:0 0 7px;color:#47698d}.field input,.field textarea,.field select{width:100%;border:1px solid #dce7f2;background:#fbfdff;border-radius:13px;padding:12px 13px;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:#80aeda;box-shadow:0 0 0 3px #dcecff}.field textarea{min-height:105px;resize:vertical;line-height:1.6}.field small{display:block;color:#8a9db2;margin-top:6px}.theme-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.theme-choice{border:2px solid #e4edf6;border-radius:14px;padding:11px 8px;background:#fff;color:var(--ink);font-weight:700;font-size:13px}.theme-choice.active{border-color:#6d9dce;background:#eff6ff}.theme-choice span{display:block;font-size:23px;margin-bottom:4px}.file-label{display:flex;align-items:center;justify-content:center;gap:8px;border:1px dashed #a9c5e2;background:#f5f9ff;padding:13px;border-radius:13px;color:#527da8;font-weight:700;cursor:pointer}.file-label input{display:none}.form-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:3px}
-.preview-shell{background:#e9f2fc;border-radius:22px;padding:13px;align-self:start;position:sticky;top:100px}.preview-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:#7594b5;font-weight:800;padding:4px 5px 12px}.preview{min-height:490px;border-radius:16px;background:var(--paper);padding:23px 18px;text-align:center;position:relative;overflow:hidden;border:1px solid #fff}.preview.blue{background:linear-gradient(135deg,#f9fcff,#eaf4ff)}.preview.pink{background:linear-gradient(135deg,#fffafd,#fff0f5)}.preview.sunshine{background:linear-gradient(135deg,#fffdf4,#fff5d8)}.preview .preview-deco{font-size:25px;letter-spacing:8px}.preview .preview-photo{width:112px;height:112px;object-fit:cover;border-radius:50%;border:7px solid white;box-shadow:0 8px 22px #315b8520;margin:19px auto 12px;display:none}.preview h3{font:700 31px "Playfair Display",serif;margin:12px 0;color:#355b83}.preview .to-line{color:#7b9ab9;font-size:13px}.preview .preview-message{font:16px/1.8 Georgia,serif;color:#58718c;white-space:pre-wrap;margin:15px auto;max-width:330px}.preview .preview-sign{font-family:Pacifico,cursive;color:#7098c0;font-size:20px;margin-top:17px}.preview .preview-footer{position:absolute;bottom:15px;left:0;right:0;color:#9aafc4;font-size:11px}.preview .preview-cake{font-size:42px;margin:10px}
-.note{background:#f3f7fc;border-radius:13px;padding:12px;color:#6c86a2;font-size:12px;line-height:1.6;margin-top:14px}.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0 55px}.how{background:#ffffffdf;border-radius:20px;padding:20px;text-align:center;border:1px solid white}.how b{display:grid;place-items:center;margin:0 auto 10px;width:34px;height:34px;border-radius:50%;background:#dcecff;color:#4775a4}.how h3{font:700 18px "Playfair Display",serif;margin:5px}.how p{font-size:13px;line-height:1.6;color:var(--muted);margin:5px 0 0}
-footer{background:#ffffffd9;border:1px solid #fff;border-radius:22px;padding:22px;text-align:center;color:#7892ad;font-size:13px;margin-bottom:18px}footer strong{font-family:"Playfair Display",serif;color:#41698f}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#24466b;color:white;padding:12px 18px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.25s;z-index:30;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:760px){.nav a:not(:last-child){display:none}.feature-grid,.how-grid{grid-template-columns:1fr}.builder-grid{grid-template-columns:1fr}.preview-shell{position:static;order:-1}.hero{margin-top:14px}.topbar{top:6px}.hero h1{letter-spacing:-1.5px}.feature{min-height:0}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--blue:#a9c9e8;--deep:#345878;--cream:#fffaf0;--pink:#f6dce4;--ink:#34495e}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background-color:var(--cream);background-image:linear-gradient(90deg,rgba(132,174,211,.16) 1px,transparent 1px),linear-gradient(rgba(132,174,211,.16) 1px,transparent 1px);background-size:28px 28px}
+button,input,textarea{font:inherit}button{cursor:pointer;border:0}
+.top{padding:17px 22px;display:flex;justify-content:space-between;align-items:center;background:#fffaf0dd;backdrop-filter:blur(10px);border-bottom:1px solid #d9e5ef}
+.brand{font-weight:700;color:var(--deep);letter-spacing:.3px}.brand span{font-size:24px;vertical-align:middle;margin-right:7px}
+.wrap{width:min(900px,92%);margin:35px auto 70px}
+.card{background:#fffdf8;border:1px solid #dce8f1;border-radius:25px;padding:clamp(22px,5vw,42px);box-shadow:0 12px 35px #54728b12}
+h1,h2{font-family:'Playfair Display',serif;color:var(--deep)}h1{font-size:clamp(34px,7vw,57px);line-height:1.08;margin:10px 0}h2{font-size:30px;margin:0 0 12px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;color:#7296b6}
+.sub{line-height:1.7;color:#687d90}.bunny{font-size:76px;display:block;filter:drop-shadow(0 5px 2px #9bb9d133)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:700;color:#496783}input,textarea{width:100%;border:1px solid #d5e2ed;border-radius:13px;padding:13px 14px;background:#fff;color:#34495e;outline:none}input:focus,textarea:focus{border-color:#7fa9cf;box-shadow:0 0 0 3px #b8d3eb55}textarea{min-height:130px;resize:vertical}
+.themes{display:flex;gap:10px;flex-wrap:wrap}.theme{padding:10px 15px;border-radius:30px;border:1px solid #d5e2ed;background:white;color:#496783}.theme.active{background:#dceaf6;border-color:#7fa9cf}
+.primary{background:var(--deep);color:white;padding:14px 22px;border-radius:30px;font-weight:700;box-shadow:0 5px 0 #223f59;margin-top:22px}.primary:hover{transform:translateY(-1px)}.secondary{background:#edf4fa;color:var(--deep);padding:12px 18px;border-radius:25px;font-weight:700}
+.note{font-size:12px;line-height:1.6;color:#7b8c9b;margin-top:15px}
+.hidden{display:none!important}.center{text-align:center}.screen{min-height:430px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.screen p{max-width:540px;line-height:1.8;color:#63788b;white-space:pre-wrap}.letter{background:#fff8e9;border:1px dashed #d6bd91;padding:24px;border-radius:17px;max-width:580px;width:100%;text-align:left;line-height:1.9;white-space:pre-wrap;margin:14px auto;color:#5e5b51}.pill{display:inline-block;background:#eaf2f9;color:#547a9e;padding:7px 13px;border-radius:20px;font-size:12px;font-weight:700}
+#linkBox{margin-top:20px;padding:18px;background:#eef5fb;border-radius:16px;overflow-wrap:anywhere}#shareUrl{font-size:13px;color:#345878;word-break:break-all}
+.foot{text-align:center;font-size:12px;color:#8293a1;margin:24px}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.wrap{margin-top:22px}.top{padding:14px 16px}}
 </style>
 </head>
 <body>
-<div class="site-wrap">
-<header class="topbar">
-  <div class="brand"><div class="brand-mark">🐰</div><span>Pookie Birthday Surprises ♡</span></div>
-  <nav class="nav"><a href="#home">Home</a><a href="#ideas">The little details</a><a href="#create">Create</a><button class="pill" onclick="document.querySelector('#create').scrollIntoView({behavior:'smooth'})">Make a surprise ↗</button></nav>
-</header>
-
-<main>
-<section class="hero" id="home">
-  <div class="eyebrow">✦ A tiny corner for big feelings ✦</div>
-  <h1>Make their day<br><em>a little more magical.</em></h1>
-  <p>Turn your favourite words, sweetest memories and little inside jokes into a birthday surprise that feels like it was made just for them.</p>
-  <div class="hero-actions"><button class="pill" onclick="document.querySelector('#create').scrollIntoView({behavior:'smooth'})">Create a birthday surprise ♡</button><a class="pill light" href="#ideas" style="text-decoration:none;display:inline-flex;align-items:center">Explore the magic ↓</a></div>
-  <div class="hero-art" aria-label="Birthday stickers"><span class="sticker">🐈</span><span class="sticker">⭐</span><span class="sticker">💌</span><span class="sticker">🐰</span></div>
+<header class="top"><div class="brand"><span>🐰</span> Pookie Birthday Surprises</div><span class="pill">a little world of wishes</span></header>
+<main class="wrap">
+<section id="creator" class="card">
+<div class="center"><span class="bunny">🐰</span><div class="eyebrow">make a little magic</div><h1>Create a birthday surprise</h1><p class="sub">Build a tiny birthday journey, then send your person their very own link. No photo uploads. Just words, wishes and bunny magic.</p></div>
+<div class="grid">
+<div class="field"><label for="to">Who's celebrating?</label><input id="to" maxlength="35" placeholder="e.g. Aanya"></div>
+<div class="field"><label for="from">Your name / nickname</label><input id="from" maxlength="35" placeholder="e.g. their favourite human"></div>
+<div class="field full"><label>Choose a little mood</label><div class="themes"><button class="theme active" data-theme="blue" type="button">🩵 Blue skies</button><button class="theme" data-theme="pink" type="button">🎀 Strawberry cream</button><button class="theme" data-theme="sun" type="button">🌼 Sunny day</button></div></div>
+<div class="field full"><label for="question">A fun question for them</label><input id="question" maxlength="100" placeholder="e.g. Ready for your tiny surprise?"></div>
+<div class="field full"><label for="message">Write your birthday letter</label><textarea id="message" maxlength="900" placeholder="Write something only they would understand..."></textarea></div>
+</div>
+<button id="make" class="primary">Create their surprise link ✨</button>
+<div id="linkBox" class="hidden"><strong>Your share link is ready! 🐇</strong><p id="shareUrl"></p><button id="copy" class="secondary" type="button">Copy link</button><p class="note">Your message is carried inside this unique link. There are no photo uploads or image storage. Anyone who has the link can read the surprise, so share it only with the intended person.</p></div>
+<p class="note">Tip: publish this website on GitHub Pages first. Then create the link from the live website so it opens for your recipient.</p>
 </section>
 
-<section id="ideas">
-  <div class="section-head"><small>Made of little things</small><h2>A surprise with your kind of magic</h2><p>Not another copied birthday message. A whole little moment.</p></div>
-  <div class="feature-grid">
-    <article class="feature"><div class="icon">💌</div><h3>Words from the heart</h3><p>Write a note that sounds like you — funny, mushy, chaotic or wonderfully heartfelt.</p></article>
-    <article class="feature"><div class="icon">📸</div><h3>Keep the memories</h3><p>Add a favourite photo and turn a tiny moment into the centre of the celebration.</p></article>
-    <article class="feature"><div class="icon">🎀</div><h3>Make it theirs</h3><p>Choose a colour mood and add their name. Every detail should feel personal.</p></article>
-  </div>
-</section>
-
-<section class="builder" id="create">
-  <div class="builder-head"><div><div class="eyebrow">✿ Your little creation studio</div><h2>Let's make someone smile.</h2><p>Fill in the details and watch your birthday card come to life.</p></div><div style="font-size:42px">🧁</div></div>
-  <div class="builder-grid">
-    <div class="form-panel">
-      <div class="field"><label for="recipient">Their name</label><input id="recipient" maxlength="45" placeholder="e.g. My favourite human"></div>
-      <div class="field"><label for="sender">Your name / nickname</label><input id="sender" maxlength="35" placeholder="e.g. Your forever partner in crime"></div>
-      <div class="field"><label>Pick a colour mood</label><div class="theme-row">
-        <button class="theme-choice active" data-theme="blue" type="button"><span>💙</span>Blue day</button>
-        <button class="theme-choice" data-theme="pink" type="button"><span>🌷</span>Sweet pink</button>
-        <button class="theme-choice" data-theme="sunshine" type="button"><span>☀️</span>Sunshine</button>
-      </div></div>
-      <div class="field"><label for="message">Your birthday letter</label><textarea id="message" maxlength="700" placeholder="A little note, a favourite memory, an inside joke..."></textarea><small><span id="count">0</span>/700 characters</small></div>
-      <div class="field"><label for="photo">Add a favourite photo (optional)</label><label class="file-label">📷 Choose a photo<input id="photo" type="file" accept="image/*"></label><small id="photoName">A photo makes it extra personal.</small></div>
-      <div class="form-actions"><button class="pill" id="updateBtn" type="button">Update my card ✨</button><button class="pill light" id="resetBtn" type="button">Start over</button></div>
-      <div class="note">This first version lets you design and preview your card in your browser. We'll connect permanent online sharing and saved surprises to the database in the next build stage.</div>
-    </div>
-    <div class="preview-shell">
-      <div class="preview-top"><span>Live little preview</span><span>♡ 01 / 01</span></div>
-      <div class="preview blue" id="preview">
-        <div class="preview-deco">✦ ♡ ✧</div><div class="preview-cake">🎂</div>
-        <div class="to-line">A little birthday wish for</div>
-        <h3 id="pRecipient">Someone wonderful</h3>
-        <img class="preview-photo" id="pPhoto" alt="Your selected memory">
-        <div class="preview-message" id="pMessage">Wishing you a day full of laughter, lovely surprises and all the happiness you bring to the people around you. Never stop being wonderfully you. ♡</div>
-        <div class="preview-sign">with love, <span id="pSender">someone who adores you</span></div>
-        <div class="preview-footer">made with a little magic & lots of love ♡</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-head"><small>Three tiny steps</small><h2>Easy as making a wish</h2></div>
-  <div class="how-grid">
-    <article class="how"><b>1</b><h3>Add your details</h3><p>Write their name and the words you want them to remember.</p></article>
-    <article class="how"><b>2</b><h3>Make it yours</h3><p>Pick a colour mood and add a photo full of memories.</p></article>
-    <article class="how"><b>3</b><h3>Preview the love</h3><p>See your card come together before we add online publishing.</p></article>
-  </div>
+<section id="experience" class="card hidden">
+<div id="s1" class="screen"><span class="bunny">🐰</span><span class="pill">a message for <b id="recipient1"></b></span><h1>Hey, you!</h1><p id="introText">A tiny bunny has been waiting to give you something...</p><button class="primary" id="start">Open your surprise →</button></div>
+<div id="s2" class="screen hidden"><span class="bunny">🐰💌</span><div class="eyebrow">important bunny business</div><h2 id="questionView">Ready for a little surprise?</h2><p>Take a deep breath. This next bit was made just for you.</p><button class="primary" id="reveal">I'm ready! ✨</button><button class="secondary" id="notReady">Wait, let me build suspense</button></div>
+<div id="s3" class="screen hidden"><span class="bunny">🎂🐰</span><div class="eyebrow">today is your day</div><h1>Happy Birthday, <span id="recipient2"></span>!</h1><p>May your year be sprinkled with lovely little surprises, big laughs and people who make you feel at home.</p><div class="letter"><div class="eyebrow">a little note from <span id="senderView"></span></div><div id="letterView"></div></div><button class="primary" id="finish">One last thing →</button></div>
+<div id="s4" class="screen hidden"><span class="bunny">🐰⭐</span><h1>Keep being wonderfully you.</h1><p>This little birthday world was made with care, just for you.</p><span class="pill">the end… and a new beginning ♡</span></div>
 </section>
 </main>
-<footer><strong>Pookie Birthday Surprises</strong><br>For the people who make ordinary days feel special. ♡<br><span>🐰 &nbsp; ⭐ &nbsp; 💙 &nbsp; 🐈</span></footer>
-</div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="foot">Made with a little extra love and one very busy bunny. 🐰</div>
 <script>
 const $=id=>document.getElementById(id);
-let selectedTheme='blue', photoData='';
-function updatePreview(){
-  $('pRecipient').textContent=$('recipient').value.trim()||'Someone wonderful';
-  $('pSender').textContent=$('sender').value.trim()||'someone who adores you';
-  $('pMessage').textContent=$('message').value.trim()||'Wishing you a day full of laughter, lovely surprises and all the happiness you bring to the people around you. Never stop being wonderfully you. ♡';
-  $('count').textContent=$('message').value.length;
-  $('preview').className='preview '+selectedTheme;
-  $('pPhoto').src=photoData;
-  $('pPhoto').style.display=photoData?'block':'none';
+let selectedTheme='blue';
+const palettes={blue:['#a9c9e8','#345878','#fffaf0'],pink:['#f2cbd8','#8d5369','#fff8f8'],sun:['#f3d78e','#80602d','#fffaf0']};
+document.querySelectorAll('.theme').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.theme').forEach(x=>x.classList.remove('active'));btn.classList.add('active');selectedTheme=btn.dataset.theme;}));
+function encode(obj){const bytes=new TextEncoder().encode(JSON.stringify(obj));let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));return btoa(binary).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+function decode(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';const binary=atob(str);const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));return JSON.parse(new TextDecoder().decode(bytes));}
+function showExperience(data){
+ $('creator').classList.add('hidden');$('experience').classList.remove('hidden');
+ const [bg,ink,paper]=palettes[data.theme]||palettes.blue;document.documentElement.style.setProperty('--blue',bg);document.documentElement.style.setProperty('--deep',ink);document.documentElement.style.setProperty('--cream',paper);
+ $('recipient1').textContent=data.to;$('recipient2').textContent=data.to;$('senderView').textContent=data.from||'someone who cares';$('questionView').textContent=data.question||'Ready for a little surprise?';$('letterView').textContent=data.message||'Wishing you the happiest birthday. You deserve lovely things.';
+ $('introText').textContent='A tiny bunny has been waiting to give you something, '+data.to+'...';
 }
-['recipient','sender','message'].forEach(id=>$(id).addEventListener('input',updatePreview));
-document.querySelectorAll('.theme-choice').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.theme-choice').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');selectedTheme=btn.dataset.theme;updatePreview();
-}));
-$('photo').addEventListener('change',e=>{
-  const file=e.target.files&&e.target.files[0];if(!file)return;
-  if(!file.type.startsWith('image/')){showToast('Please choose an image file.');return;}
-  if(file.size>5*1024*1024){showToast('Please choose a photo under 5 MB.');e.target.value='';return;}
-  const reader=new FileReader();reader.onload=()=>{photoData=reader.result;$('photoName').textContent=file.name;updatePreview();};reader.readAsDataURL(file);
+function step(n){['s1','s2','s3','s4'].forEach((id,i)=>$(id).classList.toggle('hidden',i!==n-1));}
+$('make').addEventListener('click',()=>{
+ const data={to:$('to').value.trim()||'birthday star',from:$('from').value.trim(),question:$('question').value.trim(),message:$('message').value.trim(),theme:selectedTheme};
+ const url=location.href.split('#')[0]+'#surprise='+encode(data);
+ $('shareUrl').textContent=url;$('linkBox').classList.remove('hidden');
+ $('copy').textContent='Copy link';
 });
-$('updateBtn').addEventListener('click',()=>{updatePreview();showToast('Your little birthday card is looking lovely! ♡');});
-$('resetBtn').addEventListener('click',()=>{
-  $('recipient').value='';$('sender').value='';$('message').value='';$('photo').value='';$('photoName').textContent='A photo makes it extra personal.';photoData='';selectedTheme='blue';
-  document.querySelectorAll('.theme-choice').forEach(b=>b.classList.toggle('active',b.dataset.theme==='blue'));updatePreview();showToast('A fresh page, just like that. ♡');
-});
-let toastTimer;function showToast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2600);}
-updatePreview();
+$('copy').addEventListener('click',async()=>{const url=$('shareUrl').textContent;try{await navigator.clipboard.writeText(url);$('copy').textContent='Copied! ✓';}catch(e){$('copy').textContent='Select and copy the link above';}});
+$('start').addEventListener('click',()=>step(2));
+$('reveal').addEventListener('click',()=>step(3));
+$('notReady').addEventListener('click',()=>{$('notReady').textContent='Okay okay, now I am ready 😄';});
+$('finish').addEventListener('click',()=>step(4));
+if(location.hash.startsWith('#surprise=')){try{const data=decode(location.hash.slice(10));showExperience(data);}catch(e){$('creator').classList.remove('hidden');}}
 </script>
 </body>
-    </html>
+</html>
